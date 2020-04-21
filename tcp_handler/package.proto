@@ -1,0 +1,16 @@
+
+syntax = "proto2";
+
+package tcp_handler;
+
+//import "google/protobuf/timestamp.proto";
+option go_package = ".;tcp_handler";
+
+message DeleteAction {
+  optional string job  = 1;
+  map<string, string> labels = 2;
+}
+
+message MapResponse {
+  map<string, string> map = 2;
+}
